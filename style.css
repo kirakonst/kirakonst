@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); 
+:root{
+    --color:brown;
+    --textColor:black;
+    --Color2:white;
+}
+
 *{ 
     margin:0; 
     padding:0; 
@@ -8,14 +14,14 @@ body{
     font-family: "Montserrat", sans-serif; 
 } 
 header{ 
-    background-color: brown; 
+    background-color: var(--color); 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
     padding: 14px; 
 } 
 .logo{ 
-    color: black; 
+    color: var(--textColor); 
     font-size: 36px; 
     transition: 2s;
 } 
@@ -24,11 +30,11 @@ nav{
     justify-content: space-evenly; 
     align-items: center; 
     gap: 110px; 
-    color: black; 
+    color: var(--textColor); 
 } 
  
 a{ 
-    color:black; 
+    color:var(--textColor); 
     text-decoration: none;  
 } 
 img{ 
@@ -36,8 +42,8 @@ img{
     border-radius: 4px; 
 } 
 .banner{ 
-    background-color: black; 
-    color: white; 
+    background-color:var(--textColor); 
+    color: var(--Color2); 
 } 
 .container{ 
     display: flex; 
@@ -67,6 +73,12 @@ iframe{
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
 }
+input:checked~*{
+        --color:Maroon;
+        --textColor:white;
+        --Color2:black;
+    }
+
 @keyframes anim1{
     0%{
         border-radius:5%;
@@ -75,5 +87,3 @@ iframe{
         border-radius:20%;
     }
 }
-
-   
